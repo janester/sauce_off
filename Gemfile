@@ -4,7 +4,7 @@ gem 'rails', '3.2.11'
 gem 'pg'
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 
 

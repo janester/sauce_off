@@ -1,8 +1,11 @@
 = form_tag vote_path do
-  %h1 Choose Your Candidate:
-  -@candidates.each do |can|
+  %h1 Choose Your Favorite:
+  -unless flash[:alert].nil?
+    = flash[:alert]
+    %br
+  -@candidates.each_with_index do |can, i|
     = radio_button_tag :candidate_id, can.id
-    = label_tag can.name
+    = label_tag "Sauce #{i+1}"
     %br
   %h1 Enter Your Information:
   = label_tag :name

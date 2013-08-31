@@ -1,5 +1,14 @@
-%h1 Welcome to the First Annual GrowNYC Sauce-Off!
+%h1{style:"text-align:center;"} Welcome to the First Annual 79th Street Greenmarket
+%h1{style:"text-align:center;"} Sauce-Off!
 
-= link_to("Vote", new_vote_path)
+-if !session[:has_voted]
+  = link_to("Vote", new_vote_path)
+-else
+  %h3 Thanks for your vote!
 -if @cu.present?
   =link_to("Results", results_path)
+
+-if @cu.nil?
+  = link_to("Login As Admin", session_new_path)
+-else
+  = link_to("Logout", session_destroy_path)

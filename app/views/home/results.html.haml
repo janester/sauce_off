@@ -1,2 +1,7 @@
-%h1 Home#results
-%p Find me in app/views/home/results.html.haml
+%h1 Results
+
+%ol
+-@candidates.each do |can|
+  %li= "#{can.name} | #{can.votes}"
+
+# = link_to("Download Excel Spreadsheet")
