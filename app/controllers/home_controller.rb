@@ -7,7 +7,6 @@ class HomeController < ApplicationController
   end
 
   def vote
-    binding.pry
     can = Candidate.find(params[:candidate_id])
     can.votes += 1
     can.save
