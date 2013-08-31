@@ -1,0 +1,14 @@
+= form_tag vote_path do
+  %h1 Choose Your Candidate:
+  -@candidates.each do |can|
+    = radio_button_tag :candidate_id, can.id
+    = label_tag can.name
+    %br
+  %h1 Enter Your Information:
+  = label_tag :name
+  = text_field_tag "voter[name]"
+  %br
+  = label_tag :email
+  = text_field_tag "voter[email]"
+  %br
+  = submit_tag "Vote!"
