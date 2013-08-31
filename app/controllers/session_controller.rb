@@ -4,8 +4,13 @@ class SessionController < ApplicationController
 
   def create
     user = User.find_by_username(params[:username])
-    session[:user_id] = user.id if user.present? && user.authenticate(params[:password])
-    redirect_to(root_path)
+    if user.present? && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect_to(root_path)
+    else
+      flash[:alert] = "Username or Password Is Incorrect"
+      render :new
+    end
   end
 
   def destroy
