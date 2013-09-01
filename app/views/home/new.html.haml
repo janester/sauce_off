@@ -9,10 +9,10 @@
     %br
   %h1.lobster Enter Your Information:
   = label_tag :name, nil, class:"label"
-  = text_field_tag "voter[name]", nil, class:"text-input"
+  = text_field_tag "voter[name]", nil, placeholder: "e.g.  Jane Doe", class:"text-input"
   %br
   = label_tag "Email*", nil, class:"label"
-  = text_field_tag "voter[email]", nil, class:"text-input"
+  = text_field_tag "voter[email]", nil, placeholder: "e.g.  jane@doe.com", class:"text-input"
   %br
   = submit_tag "Vote!", class:"btn"
 %p *you will be added to the mailing list for our e-newsletter
