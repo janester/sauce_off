@@ -47,8 +47,11 @@ body {
   display: inline;
 }
 
-// .text-input {
-//   margin: 1%;
-//   border: none;
-// }
+tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.25)
+}
+
+table {
+  margin: 0 auto;
+}
 

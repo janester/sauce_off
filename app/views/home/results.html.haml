@@ -1,6 +1,11 @@
-%h1 Results
+%h1.lobster Results
 
-%ol
--@candidates.each do |can|
-  %li= "#{can.name} | #{can.votes}"
+%table
+  %tr
+    %th Candidate
+    %th Votes
+  -@candidates.each do |can|
+    %tr
+      %td= can.name
+      %td= can.votes
 
