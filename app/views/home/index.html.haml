@@ -1,12 +1,11 @@
-%h1{style:"text-align:center;"} Welcome to the First Annual 79th Street Greenmarket
-%h1{style:"text-align:center;"} Sauce-Off!
-
+%h1.lobster Welcome to the First Annual 79th Street Greenmarket Sauce-Off!
+%p Our farmers have made their finest sauce from Greenmarket tomatoes and we need you, the customers,  to be the judges! Taste them all and cast your vote here.
 -if !session[:has_voted]
-  = link_to("Vote", new_vote_path)
+  = link_to("Vote", new_vote_path, class:"vote btn")
 -else
-  %h3 Thanks for your vote!
+  %h1.lobster Thanks for your vote!
 -if @cu.present?
-  =link_to("Results", results_path)
+  =link_to("Results", results_path, class:"results btn")
 
 -if @cu.nil?
   = link_to("Login As Admin", session_new_path)

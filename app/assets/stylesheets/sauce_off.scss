@@ -1,0 +1,54 @@
+$tomato: rgb(255, 99, 71);
+$green: #88a943;
+
+.lobster {
+  font-family:'Lobster', cursive;
+  font-weight: normal;
+}
+
+.oleo {
+  font-family: 'Oleo Script', cursive;
+}
+
+body {
+  font-family: 'Actor', sans-serif;
+  text-align: center;
+  background: url("rowley.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  .container {
+    background: rgba(255, 255, 255, 0.74);
+    border-radius: 10px;
+    min-height: 75%;
+    margin: 2%;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  background: red;
+  border: 2px solid $green;
+  font-size: 3em;
+  display: block;
+  margin: 0 1em;
+  color: $green;
+  font-family:'Lobster', cursive;
+  border-radius: 10px;
+}
+
+.label {
+  text-align: left;
+  font-family: 'Actor', sans-serif;
+}
+
+.inline-label {
+  display: inline;
+}
+
+// .text-input {
+//   margin: 1%;
+//   border: none;
+// }
+

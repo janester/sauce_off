@@ -1,17 +1,18 @@
 = form_tag vote_path do
-  %h1 Choose Your Favorite:
+  %h1.lobster Choose Your Favorite:
   -unless flash[:alert].nil?
     = flash[:alert]
     %br
   -@candidates.each_with_index do |can, i|
     = radio_button_tag :candidate_id, can.id
-    = label_tag "Sauce #{i+1}"
+    = label_tag "Sauce #{i+1}", nil, class:"inline-label"
     %br
-  %h1 Enter Your Information:
-  = label_tag :name
-  = text_field_tag "voter[name]"
+  %h1.lobster Enter Your Information:
+  = label_tag :name, nil, class:"label"
+  = text_field_tag "voter[name]", nil, class:"text-input"
   %br
-  = label_tag :email
-  = text_field_tag "voter[email]"
+  = label_tag "Email*", nil, class:"label"
+  = text_field_tag "voter[email]", nil, class:"text-input"
   %br
-  = submit_tag "Vote!"
+  = submit_tag "Vote!", class:"btn"
+%p *you will be added to the mailing list for our e-newsletter
